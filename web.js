@@ -14,7 +14,7 @@ app.get('/img/*.*', function(req, rsp){
     	var img = fs.readFileSync('img/'+req.params[0]+'.'+req.params[1]);
 	rsp.writeHead(200, {"Content-Type": "image/jpg"});
 	rsp.end(img, "binary");
-	console.log(req);	
+	//console.log(req);	
 });
 
 var port = process.env.PORT || 8080;
